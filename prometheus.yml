@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s  # How often Prometheus scrapes metrics
+
+scrape_configs:
+  - job_name: 'frontend'
+    static_configs:
+      - targets: ['<frontend-container-name>:8080']  # Replace with your frontend service address
+
+  - job_name: 'backend'
+    static_configs:
+      - targets: ['<backend-container-name>:8080']  # Replace with your backend service address
+
+  - job_name: 'database'
+    static_configs:
+      - targets: ['<database-container-name>:5432']  # Replace with your database service address

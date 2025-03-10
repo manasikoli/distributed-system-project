@@ -1,0 +1,26 @@
+version: '3'
+services:
+  frontend:
+    image: frontend-image
+    ports:
+      - "8080:8080"
+
+  backend:
+    image: backend-image
+    ports:
+      - "8081:8081"
+
+  database:
+    image: postgres
+    ports:
+      - "5432:5432"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
