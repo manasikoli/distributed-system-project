@@ -19,24 +19,6 @@ Orchestration: Kubernetes
 
 Version Control: GitHub
 
-# Project Structure
-|-- frontend/
-|   |-- index.html
-|   |-- Dockerfile
-|
-|-- backend/
-|   |-- app.py
-|   |-- requirements.txt
-|   |-- Dockerfile
-|
-|-- k8s/
-|   |-- frontend-deployment.yml
-|   |-- backend-deployment.yml
-|   |-- mysql-deployment.yml
-|
-|-- docker-compose.yml
-|-- README.md
-
 # Installation & Setup
 
 1. Clone the Repository
