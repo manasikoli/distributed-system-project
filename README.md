@@ -1,11 +1,11 @@
 # distributed-system-project
 User Details Web Service
 
-Overview
+# Overview
 
 This project is a full-stack web service that collects user details through a frontend form, processes them via a Flask backend, and stores them in a MySQL database. The application is containerized using Docker and deployed using Kubernetes.
 
-Technologies Used
+# Technologies Used
 
 Frontend: HTML, CSS, Nginx
 
@@ -19,7 +19,7 @@ Orchestration: Kubernetes
 
 Version Control: GitHub
 
-Project Structure
+# Project Structure
 |-- frontend/
 |   |-- index.html
 |   |-- Dockerfile
@@ -37,7 +37,7 @@ Project Structure
 |-- docker-compose.yml
 |-- README.md
 
-Installation & Setup
+# Installation & Setup
 
 1. Clone the Repository
 git clone <your-github-repo-url>
@@ -61,7 +61,7 @@ docker push <your-dockerhub-username>/frontend
 
 docker push <your-dockerhub-username>/backend
 
-Deploying on Kubernetes
+# Deploying on Kubernetes
 
 1. Apply Kubernetes Deployments
 kubectl apply -f k8s/frontend-deployment.yml
@@ -71,20 +71,20 @@ kubectl apply -f k8s/mysql-deployment.yml
 2. Expose Frontend Service
 kubectl expose deployment frontend --type=LoadBalancer --port=80
 
-API Endpoints
+# API Endpoints
 
 POST /api/user
 
 Description: Stores user details in the database.
 
-Request Body:
+# Request Body:
 {
     "name": "John Doe",
     "email": "johndoe@example.com",
     "age": 25
 }
 
-Response:
+# Response:
 {
     "message": "User added successfully"
 }
