@@ -4,12 +4,12 @@ global:
 scrape_configs:
   - job_name: 'frontend'
     static_configs:
-      - targets: ['<frontend-container-name>:8080']  # Replace with your frontend service address
+      - targets: ['<frontend-container-name>:8080']
 
   - job_name: 'backend'
     static_configs:
-      - targets: ['<backend-container-name>:8080']  # Replace with your backend service address
+      - targets: ['<backend-container-name>:8080']
 
   - job_name: 'database'
     static_configs:
-      - targets: ['<database-container-name>:5432']  # Replace with your database service address
+      - targets: ['<database-container-name>:5432']
